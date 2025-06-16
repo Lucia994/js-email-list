@@ -9,11 +9,10 @@ for (let i = 0; i < 10; i++)   // il ciclo è impostato per essere iterato 10 vo
     fetch(endpoint) //funzione che genera email random
         .then(response => response.json())
         .then(data => {
-            console.log(data); //Stampo in console la prima email realizzata
+            // console.log(data); //Stampo in console le email realizzate
 
+            emailList.push(data); //Inserisco le email create nell'array emailList 
 
-
-
-
+            console.log(emailList); //Verifico se le email cono state inserite correttamente
 
         })
