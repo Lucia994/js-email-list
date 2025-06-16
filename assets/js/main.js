@@ -2,6 +2,7 @@ console.log("Hello");
 //Selezioniamo element ul della DOM
 const ulEl = document.getElementById("email")
 
+
 const endpoint = "https://flynn.boolean.careers/exercises/api/random/mail"
 //Generare array per conservare le email random realizzate 
 let emailList = [];
@@ -21,8 +22,16 @@ for (let i = 0; i < 10; i++)   // il ciclo è impostato per essere iterato 10 vo
             //     console.log(emailList) // Abbiamo creato un array di 10 oggetti..
             // }
 
-            if (emailList.length === 10){ //Inseriamo condizione per limitare gli array 
-            console.log(emailList) // Abbiamo creato un array di 10 elementi
+            if (emailList.length === 10) { //Inseriamo condizione per limitare gli array 
+                console.log(emailList) // Abbiamo creato un array di 10 elementi
             }
-
+            //Creiamo un nuovo elemento li per ciascuna email
+            emailList.forEach(email => {
+                const liEl = document.createElement("li");
+                liEl.textContent = email;
+                liEl.classList.add("list-group-item");
+                ulEl.appendChild(liEl); //Aggiungiamo liEl appena creato all'interno del nodo ulEl del DOM
+            });
         })
+
+
