@@ -13,6 +13,10 @@ for (let i = 0; i < 10; i++)   // il ciclo è impostato per essere iterato 10 vo
 
             emailList.push(data); //Inserisco le email create nell'array emailList 
 
-            console.log(emailList); //Verifico se le email cono state inserite correttamente
+            // console.log(emailList); //Verifico se le email cono state inserite correttamente //Vengono stampate dieci array ciascucna con dieci elementi all'interno
+
+            if (emailList.length === 10){ //Inseriamo condizione per limitare gli array 
+                console.log(emailList)
+            }
 
         })
